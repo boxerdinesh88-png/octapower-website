@@ -48,13 +48,13 @@
     <div class="grid g4 stagger">
       <?php foreach ([
         ['bolt','EPC Contracting','Turnkey engineering, procurement and construction.','epc','team'],
+        ['wrench','Mechanical Works','Piping, fabrication, welding and equipment erection.','mechanical','welding'],
+        ['building','Civil Works','Foundations, earthwork, control rooms and roads.','civil','excavator'],
+        ['gear','O&amp;M Services','Preventive maintenance and 24×7 breakdown support.','om','testing'],
         ['grid','Substations','AIS &amp; GIS substations up to 400 kV.','substation','substation'],
         ['tower','Transmission Lines','Tower erection and stringing for HV/EHV lines.','transmission','towers'],
         ['sun','Solar Power Plants','Ground-mount, rooftop and floating solar.','solar','solar'],
-        ['wrench','Mechanical Works','Piping, fabrication, welding and equipment erection.','mechanical','welding'],
-        ['building','Civil Works','Foundations, earthwork, control rooms and roads.','civil','excavator'],
         ['plug','EV &amp; Distribution','EV charging hubs, RMUs and HT/LT networks.','distribution','ev'],
-        ['gear','O&amp;M Services','Preventive maintenance and 24×7 breakdown support.','om','testing'],
       ] as [$ic,$t,$d,$id,$img]): ?>
       <a href="/services#<?= $id ?>" class="card card-img">
         <div class="proj-img"><?= photo($img, '', '(max-width:640px) 100vw, (max-width:960px) 50vw, 300px') ?><span class="badge"><?= icon($ic) ?></span></div>
