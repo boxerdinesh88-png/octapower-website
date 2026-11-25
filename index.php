@@ -1,7 +1,7 @@
 <?php require __DIR__ . '/includes/header.php'; ?>
 
 <section class="hero">
-  <div class="bgphoto" aria-hidden="true"><?= photo('towers-sunset', '', '100vw', false) ?></div>
+  <div class="bgphoto" aria-hidden="true"><?= photo('hero-cranes', '', '100vw', false) ?></div>
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div>
