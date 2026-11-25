@@ -1,6 +1,9 @@
 <?php
 // Edit these once — every page reads from here.
 date_default_timezone_set('Asia/Kolkata');
+ini_set('display_errors', '0'); // never show PHP errors (paths, DB details) to visitors
+// Database + admin login live in secrets.php (server only, never in git). See secrets.example.php.
+if (is_file(__DIR__ . '/secrets.php')) require_once __DIR__ . '/secrets.php';
 const SITE_NAME    = 'OctaPower';
 const SITE_URL     = 'https://octapower.in'; // no trailing slash
 const SITE_TAGLINE = 'Power & Infrastructure, Engineered to Last';
@@ -49,7 +52,6 @@ function csv_append(string $file, array $header, array $row): bool {
     fputcsv($fh, $row);
     flock($fh, LOCK_UN);
     fclose($fh);
-    $_SESSION['last_post'] = time();
     return true;
 }
 

@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/db.php';
+require_once __DIR__ . '/includes/mailer.php';
 session_start();
 
 $positions = [
@@ -42,10 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $dir = __DIR__ . '/data/cv';
         if (!is_dir($dir)) @mkdir($dir, 0755, true);
         $saved = date('Ymd-His') . '-' . bin2hex(random_bytes(4)) . '.' . $ext;
-        if (move_uploaded_file($cv['tmp_name'], "$dir/$saved") && csv_append(__DIR__ . '/data/applications.csv',
-            ['Date', 'Name', 'Email', 'Phone', 'Position', 'Experience', 'City', 'Cover note', 'CV file', 'IP'],
-            [date('Y-m-d H:i:s'), $old['name'], $old['email'], $old['phone'], $old['position'], $old['experience'], $old['city'], $old['message'], "data/cv/$saved", $_SERVER['REMOTE_ADDR'] ?? ''])) {
+        if (move_uploaded_file($cv['tmp_name'], "$dir/$saved")
+            && save_entry('applications', ['cv_file' => $saved, 'ip' => $_SERVER['REMOTE_ADDR'] ?? ''] + $old)) {
             header('Location: /careers?sent=1#apply', true, 303);
+            if (function_exists('fastcgi_finish_request')) fastcgi_finish_request(); // visitor sees the thank-you page before mail goes out
+            notify_submission('application', $old);
             exit;
         }
         $errors[] = 'Sorry, we could not save your application. Please email your CV to ' . EMAIL . '.';

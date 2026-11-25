@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /data/
 Disallow: /includes/
+Disallow: /admin

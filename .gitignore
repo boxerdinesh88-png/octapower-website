@@ -1,3 +1,5 @@
 # Form submissions and uploaded CVs (private, stay on the server)
 data/*
 !data/.htaccess
+# Database + admin passwords (server only)
+includes/secrets.php

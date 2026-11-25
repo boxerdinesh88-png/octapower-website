@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/db.php';
+require_once __DIR__ . '/includes/mailer.php';
 session_start();
 
 $services = ['epc' => 'EPC Contracting', 'substation' => 'Substations', 'transmission' => 'Transmission Lines', 'solar' => 'Solar Power Plants', 'mechanical' => 'Mechanical Works', 'civil' => 'Civil Works', 'distribution' => 'EV & Distribution', 'om' => 'O&M Services', 'other' => 'Other'];
@@ -18,10 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (mb_strlen($old['message']) < 10 || mb_strlen($old['message']) > 3000) $errors[] = 'Message should be 10–3000 characters.';
 
     if (!$errors) {
-        if (csv_append(__DIR__ . '/data/messages.csv',
-            ['Date', 'Name', 'Email', 'Phone', 'Company', 'Service', 'Message', 'IP'],
-            [date('Y-m-d H:i:s'), $old['name'], $old['email'], $old['phone'], $old['company'], $services[$old['service']], $old['message'], $_SERVER['REMOTE_ADDR'] ?? ''])) {
+        $entry = ['service' => $services[$old['service']], 'ip' => $_SERVER['REMOTE_ADDR'] ?? ''] + $old;
+        if (save_entry('enquiries', $entry)) {
             header('Location: /contact?sent=1#form', true, 303);
+            if (function_exists('fastcgi_finish_request')) fastcgi_finish_request(); // visitor sees the thank-you page before mail goes out
+            notify_submission('enquiry', $entry);
             exit;
         }
         $errors[] = 'Sorry, we could not save your message. Please email us at ' . EMAIL . '.';
