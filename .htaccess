@@ -5,9 +5,10 @@ ErrorDocument 404 /404.php
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Force HTTPS (enable after activating free SSL in the InfinityFree panel)
-  # RewriteCond %{HTTPS} off
-  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  # Force HTTPS (X-Forwarded-Proto check avoids a redirect loop behind InfinityFree's proxy)
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Private folders
   RewriteRule ^(includes|data)(/|$) - [F,L]
