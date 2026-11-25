@@ -132,13 +132,12 @@
     </div>
     <div class="grid g2 stagger">
       <?php foreach ([
-        ['substation2','grid','Substation','220/33 kV GIS Substation','Uttar Pradesh','2025'],
-        ['pipes','wrench','Mechanical','Process Piping &amp; Equipment Erection','Gujarat','2025'],
-      ] as [$img,$ic,$cat,$t,$loc,$yr]): ?>
+        ['substation2','grid','Substation','220/33 kV GIS Substation'],
+        ['pipes','wrench','Mechanical','Process Piping &amp; Equipment Erection'],
+      ] as [$img,$ic,$cat,$t]): ?>
       <article class="proj">
         <div class="proj-img"><?= photo($img, html_entity_decode($t), '(max-width:640px) 100vw, 600px') ?><span class="badge"><?= icon($ic) ?></span></div>
-        <div class="proj-body"><small><?= $cat ?></small><h3><?= $t ?></h3>
-          <div class="meta"><span><?= icon('pin') ?><?= $loc ?></span><span><?= icon('clock') ?><?= $yr ?></span></div></div>
+        <div class="proj-body"><small><?= $cat ?></small><h3><?= $t ?></h3></div>
       </article>
       <?php endforeach; ?>
     </div>
