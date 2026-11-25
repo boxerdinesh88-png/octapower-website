@@ -1,0 +1,3 @@
+# Form submissions and uploaded CVs (private, stay on the server)
+data/*
+!data/.htaccess
