@@ -46,12 +46,4 @@
   }), { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal, .steps, .stats').forEach(el => io.observe(el));
 
-  // project filters
-  const filters = document.querySelector('.filters');
-  if (filters) filters.addEventListener('click', e => {
-    const b = e.target.closest('button'); if (!b) return;
-    filters.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
-    const f = b.dataset.filter;
-    document.querySelectorAll('.proj').forEach(p => p.classList.toggle('hide', f !== 'all' && p.dataset.cat !== f));
-  });
 })();

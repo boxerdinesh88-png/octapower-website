@@ -130,14 +130,13 @@
       <div><p class="eyebrow">Featured projects</p><h2 style="margin:0">Recent work in the field</h2></div>
       <a href="/projects" class="btn btn-sm">All Projects <?= icon('arrow') ?></a>
     </div>
-    <div class="grid g3 stagger">
+    <div class="grid g2 stagger">
       <?php foreach ([
         ['substation2','grid','Substation','220/33 kV GIS Substation','Uttar Pradesh','2025'],
-        ['solar-aerial','sun','Solar','150 MW Ground-Mount Solar Park','Rajasthan','2024'],
-        ['hero-pylon','tower','Transmission','132 kV D/C Line — 86 km','Madhya Pradesh','2024'],
+        ['pipes','wrench','Mechanical','Process Piping &amp; Equipment Erection','Gujarat','2025'],
       ] as [$img,$ic,$cat,$t,$loc,$yr]): ?>
       <article class="proj">
-        <div class="proj-img"><?= photo($img, $t, '(max-width:640px) 100vw, 400px') ?><span class="badge"><?= icon($ic) ?></span></div>
+        <div class="proj-img"><?= photo($img, html_entity_decode($t), '(max-width:640px) 100vw, 600px') ?><span class="badge"><?= icon($ic) ?></span></div>
         <div class="proj-body"><small><?= $cat ?></small><h3><?= $t ?></h3>
           <div class="meta"><span><?= icon('pin') ?><?= $loc ?></span><span><?= icon('clock') ?><?= $yr ?></span></div></div>
       </article>
