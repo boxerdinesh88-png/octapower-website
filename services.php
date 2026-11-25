@@ -44,16 +44,4 @@ $services = [
   </div>
 </section>
 
-<section class="sec sec-alt">
-  <div class="wrap">
-    <div class="sec-head center reveal"><p class="eyebrow">Capabilities</p><h2>Backed by our own fleet &amp; labs</h2></div>
-    <div class="stats stagger" style="margin-top:0">
-      <div class="stat"><b><span data-count="120">120</span>+</b><small>Heavy equipment units</small></div>
-      <div class="stat"><b><span data-count="18">18</span></b><small>Stringing machine sets</small></div>
-      <div class="stat"><b><span data-count="40">40</span>+</b><small>Testing kits (Omicron, Megger)</small></div>
-      <div class="stat"><b><span data-count="24">24</span>×7</b><small>Emergency response</small></div>
-    </div>
-  </div>
-</section>
-
 <?php require __DIR__ . '/includes/footer.php'; ?>

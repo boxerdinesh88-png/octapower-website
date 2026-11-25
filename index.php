@@ -13,8 +13,8 @@
         <a href="/projects" class="btn btn-ghost">View Our Work</a>
       </div>
       <div class="hero-badges reveal" style="--d:.32s">
-        <span><?= icon('shield') ?> ISO 9001 · 14001 · 45001</span>
-        <span><?= icon('clock') ?> 98% on-time delivery</span>
+        <span><?= icon('bolt') ?> Electrical · Mechanical · Civil</span>
+        <span><?= icon('shield') ?> Safety first</span>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -30,11 +30,11 @@
 </section>
 
 <div class="wrap">
-  <div class="stats stagger">
-    <div class="stat"><b><span data-count="15">15</span>+</b><small>Years of delivery</small></div>
-    <div class="stat"><b><span data-count="320">320</span>+</b><small>Projects completed</small></div>
-    <div class="stat"><b><span data-count="1850">1,850</span></b><small>Circuit km of lines</small></div>
-    <div class="stat"><b><span data-count="740">740</span> MW</b><small>Solar commissioned</small></div>
+  <div class="stats stats-text stagger">
+    <div class="stat"><b><span>Turnkey</span></b><small>EPC from design to handover</small></div>
+    <div class="stat"><b><span>Up to 400 kV</span></b><small>Substations &amp; lines</small></div>
+    <div class="stat"><b><span>In-house</span></b><small>Mechanical &amp; civil teams</small></div>
+    <div class="stat"><b><span>24×7</span></b><small>Site support</small></div>
   </div>
 </div>
 
@@ -91,7 +91,7 @@
         <circle r="4" class="pulse-dot"><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite"><mpath href="#w2"/></animateMotion></circle>
         <rect y="300" width="400" height="40" fill="#0f1114"/>
       </svg>
-      <div class="tag"><?= icon('shield') ?><div><b>0</b> LTI<br><small>last 2.1M safe man-hours</small></div></div>
+      <div class="tag"><?= icon('shield') ?><div><b>Safety first</b><br><small>on every site</small></div></div>
     </div>
     <div class="reveal">
       <p class="eyebrow">Why OctaPower</p>

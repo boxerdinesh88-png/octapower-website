@@ -21,19 +21,6 @@
     if (e.key === 'Escape' && menu.classList.contains('open')) { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); burger.focus(); }
   });
 
-  // count-up numbers: <span data-count="250">0</span>
-  const count = el => {
-    if (el.dataset.done) return; // parent and child may both be observed
-    el.dataset.done = 1;
-    const end = +el.dataset.count, t0 = performance.now(), dur = 1600;
-    const step = t => {
-      const p = Math.min((t - t0) / dur, 1);
-      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString('en-IN');
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  };
-
   // stagger siblings inside a .stagger parent
   document.querySelectorAll('.stagger').forEach(p =>
     [...p.children].forEach((c, i) => { c.classList.add('reveal'); c.style.setProperty('--d', (i % 6) * 0.08 + 's'); }));
@@ -41,9 +28,8 @@
   const io = new IntersectionObserver(entries => entries.forEach(en => {
     if (!en.isIntersecting) return;
     en.target.classList.add('in');
-    en.target.querySelectorAll('[data-count]').forEach(count);
     io.unobserve(en.target);
   }), { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal, .steps, .stats').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal, .steps').forEach(el => io.observe(el));
 
 })();

@@ -27,15 +27,4 @@ $projects = [
   </div>
 </section>
 
-<section class="sec sec-dark">
-  <div class="wrap">
-    <div class="stats stagger" style="margin-top:0">
-      <div class="stat"><b><span data-count="320">320</span>+</b><small>Projects delivered</small></div>
-      <div class="stat"><b><span data-count="14">14</span></b><small>States covered</small></div>
-      <div class="stat"><b><span data-count="65">65</span>+</b><small>Substations built</small></div>
-      <div class="stat"><b><span data-count="98">98</span>%</b><small>On-time completion</small></div>
-    </div>
-  </div>
-</section>
-
 <?php require __DIR__ . '/includes/footer.php'; ?>

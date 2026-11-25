@@ -28,22 +28,16 @@ page_hero('Industries We Serve', 'Wherever power matters, <span class="grad-text
 <section class="sec sec-alt">
   <div class="wrap split">
     <div class="reveal">
-      <p class="eyebrow">Compliance built in</p>
-      <h2>Approved, certified, audit-ready.</h2>
-      <p class="lead">We work to the standards your sector demands and keep the paperwork as clean as the workmanship.</p>
+      <p class="eyebrow">How we work</p>
+      <h2>Done right, the first time.</h2>
+      <p class="lead">We follow the standards your sector demands and keep the paperwork as clean as the workmanship.</p>
       <ul class="ticks">
-        <li><?= icon('check') ?><span>ISO 9001, ISO 14001 &amp; ISO 45001 certified management systems</span></li>
-        <li><?= icon('check') ?><span>Electrical contractor licences across multiple states</span></li>
-        <li><?= icon('check') ?><span>Vendor-registered with leading utilities and PSUs</span></li>
-        <li><?= icon('check') ?><span>CEA, IS and IEC compliant design and testing</span></li>
+        <li><?= icon('check') ?><span>Design and testing as per CEA, IS and IEC standards</span></li>
+        <li><?= icon('check') ?><span>Safety-first site practices with daily toolbox talks</span></li>
+        <li><?= icon('check') ?><span>Clear documentation and progress reports</span></li>
       </ul>
     </div>
-    <div class="grid g2 stagger">
-      <div class="stat"><b><span data-count="14">14</span></b><small>States of operation</small></div>
-      <div class="stat"><b><span data-count="9">9</span></b><small>Sectors served</small></div>
-      <div class="stat"><b><span data-count="45">45</span>+</b><small>Repeat clients</small></div>
-      <div class="stat"><b><span data-count="3">3</span></b><small>ISO certifications</small></div>
-    </div>
+    <div class="visual reveal" style="--d:.12s"><?= photo('testing', 'Electrical panel testing') ?></div>
   </div>
 </section>
 

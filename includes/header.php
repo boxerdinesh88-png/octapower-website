@@ -23,9 +23,9 @@ header('Referrer-Policy: strict-origin-when-cross-origin');
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preload" href="/assets/img/mark-sm.webp" as="image">
-<link rel="stylesheet" href="/assets/css/style.css?v=3">
+<link rel="stylesheet" href="/assets/css/style.css?v=4">
 <script>document.documentElement.classList.add("js")</script>
-<script defer src="/assets/js/main.js?v=2"></script>
+<script defer src="/assets/js/main.js?v=3"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

@@ -2,7 +2,7 @@
 // Edit these once — every page reads from here.
 date_default_timezone_set('Asia/Kolkata');
 const SITE_NAME    = 'OctaPower';
-const SITE_URL     = 'https://octapower.infinityfreeapp.com'; // change to your real domain (no trailing slash)
+const SITE_URL     = 'https://octapower.in'; // no trailing slash
 const SITE_TAGLINE = 'Power & Infrastructure, Engineered to Last';
 const PHONE        = '+91 97733 10501';
 const EMAIL        = 'info@octapower.in';
