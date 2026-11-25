@@ -5,9 +5,9 @@
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div>
-      <p class="eyebrow reveal">Power &amp; Infrastructure EPC</p>
-      <h1 class="reveal" style="--d:.08s">Powering the grid<br>that powers <span class="grad-text">India.</span></h1>
-      <p class="lead reveal" style="--d:.16s">From 400 kV substations to utility-scale solar, OctaPower designs, builds and maintains the energy infrastructure that keeps industries and cities running.</p>
+      <p class="eyebrow reveal">Infrastructure &amp; EPC Contractors</p>
+      <h1 class="reveal" style="--d:.08s">Building the infrastructure<br>that builds <span class="grad-text">India.</span></h1>
+      <p class="lead reveal" style="--d:.16s">Civil, mechanical and electrical works under one roof. OctaPower plans, builds and maintains the plants, substations and structures that keep industries and cities running.</p>
       <div class="hero-cta reveal" style="--d:.24s">
         <a href="/contact" class="btn">Get a Project Quote <?= icon('arrow') ?></a>
         <a href="/projects" class="btn btn-ghost">View Our Work</a>
