@@ -7,6 +7,7 @@ const SITE_TAGLINE = 'Power & Infrastructure, Engineered to Last';
 const PHONE        = '+91 97733 10501';
 const EMAIL        = 'info@octapower.in';
 const ADDRESS      = '2nd Floor, S-12, Aditya City Center, Vaibhav Khand, Indirapuram, Ghaziabad, Uttar Pradesh 201014';
+const REG_ADDRESS  = 'F-4048, Gaur Green City, Vaibhav Khand, Indirapuram, PO: Shipra Sun City, Ghaziabad, Uttar Pradesh 201014';
 const WHATSAPP     = '919773310501'; // digits only, with country code
 
 const NAV = [

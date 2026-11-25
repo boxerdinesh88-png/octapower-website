@@ -43,6 +43,7 @@ page_hero('Contact Us', 'Let\'s power your <span class="grad-text">next project.
       <div class="info-item"><div class="ibox"><?= icon('phone') ?></div><div><small>Call us</small><a href="tel:<?= preg_replace('/\s+/', '', PHONE) ?>"><?= PHONE ?></a></div></div>
       <div class="info-item"><div class="ibox"><?= icon('mail') ?></div><div><small>Email</small><a href="mailto:<?= EMAIL ?>"><?= EMAIL ?></a></div></div>
       <div class="info-item"><div class="ibox"><?= icon('pin') ?></div><div><small>Head office</small><span><?= ADDRESS ?></span></div></div>
+      <div class="info-item"><div class="ibox"><?= icon('building') ?></div><div><small>Registered office</small><span><?= REG_ADDRESS ?></span></div></div>
       <div class="info-item"><div class="ibox"><?= icon('clock') ?></div><div><small>Office hours</small><span>Mon – Sat, 9:30 AM – 6:30 PM</span></div></div>
     </div>
 

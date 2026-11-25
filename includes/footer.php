@@ -32,7 +32,8 @@
       <h3>Contact</h3>
       <a href="tel:<?= preg_replace('/\s+/', '', PHONE) ?>"><?= icon('phone') ?> <?= PHONE ?></a>
       <a href="mailto:<?= EMAIL ?>"><?= icon('mail') ?> <?= EMAIL ?></a>
-      <p><?= icon('pin') ?> <?= ADDRESS ?></p>
+      <p><?= icon('pin') ?> <span><b>Office:</b> <?= ADDRESS ?></span></p>
+      <p><?= icon('building') ?> <span><b>Registered:</b> <?= REG_ADDRESS ?></span></p>
     </div>
   </div>
   <div class="wrap foot-bot">
