@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/config.php';
-$title = isset($title) ? "$title | " . SITE_NAME : SITE_NAME . ' — ' . SITE_TAGLINE;
-$desc  = $desc ?? 'OctaPower delivers EPC, substations, transmission lines, solar plants and electrical infrastructure across India — on time, safely, and built to last.';
+$title = isset($title) ? "$title | " . SITE_NAME : SITE_NAME . ' | Infrastructure & EPC Contractor in Ghaziabad, India';
+$desc  = $desc ?? 'OctaPower is an infrastructure and EPC contractor in Ghaziabad (Delhi NCR) for civil, mechanical and electrical works: substations, transmission lines, solar plants and O&M across India.';
 $path  = current_path();
 $canon = SITE_URL . ($path === '/' ? '/' : $path);
 header('X-Content-Type-Options: nosniff');
@@ -20,6 +20,22 @@ header('Referrer-Policy: strict-origin-when-cross-origin');
 <meta property="og:description" content="<?= e($desc) ?>">
 <meta property="og:url" content="<?= e($canon) ?>">
 <meta property="og:image" content="<?= SITE_URL ?>/assets/img/logo.webp">
+<?php if ($path === '/'): ?>
+<script type="application/ld+json"><?= json_encode([
+  '@context' => 'https://schema.org',
+  '@type' => 'GeneralContractor',
+  'name' => SITE_NAME,
+  'url' => SITE_URL . '/',
+  'logo' => SITE_URL . '/assets/img/logo.webp',
+  'image' => SITE_URL . '/assets/img/photos/hero-cranes.webp',
+  'telephone' => PHONE,
+  'email' => EMAIL,
+  'address' => ['@type' => 'PostalAddress', 'streetAddress' => '2nd Floor, S-12, Aditya City Center, Vaibhav Khand, Indirapuram',
+    'addressLocality' => 'Ghaziabad', 'addressRegion' => 'Uttar Pradesh', 'postalCode' => '201014', 'addressCountry' => 'IN'],
+  'areaServed' => 'IN',
+  'description' => $desc,
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
+<?php endif; ?>
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preload" href="/assets/img/mark-sm.webp" as="image">
@@ -50,7 +66,7 @@ header('Referrer-Policy: strict-origin-when-cross-origin');
 // Inner-page banner. Home builds its own hero.
 function page_hero(string $eyebrow, string $h1, string $sub, string $img = ''): void { ?>
 <section class="phero">
-  <?php if ($img): ?><div class="bgphoto" aria-hidden="true"><?= photo($img, '', '100vw', false) ?></div><?php endif; ?>
+  <?php if ($img): ?><div class="bgphoto" aria-hidden="true"><?= photo($img, strip_tags($eyebrow) . ' - ' . SITE_NAME, '100vw', false) ?></div><?php endif; ?>
   <div class="phero-bg" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
     <p class="eyebrow reveal"><?= $eyebrow ?></p>

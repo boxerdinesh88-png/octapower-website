@@ -1,7 +1,7 @@
 <?php require __DIR__ . '/includes/header.php'; ?>
 
 <section class="hero">
-  <div class="bgphoto" aria-hidden="true"><?= photo('hero-cranes', '', '100vw', false) ?></div>
+  <div class="bgphoto" aria-hidden="true"><?= photo('hero-cranes', 'Infrastructure construction site with tower cranes', '100vw', false) ?></div>
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div>
@@ -19,7 +19,7 @@
     </div>
     <div class="hero-art" aria-hidden="true">
       <div class="ring"></div><div class="ring r2"></div><div class="glow"></div>
-      <img src="/assets/img/mark.webp" width="590" height="520" alt="" fetchpriority="high">
+      <img src="/assets/img/mark.webp" width="590" height="520" alt="OctaPower logo" fetchpriority="high">
     </div>
   </div>
   <svg class="wire" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
@@ -57,7 +57,7 @@
         ['plug','EV &amp; Distribution','EV charging hubs, RMUs and HT/LT networks.','distribution','ev'],
       ] as [$ic,$t,$d,$id,$img]): ?>
       <a href="/services#<?= $id ?>" class="card card-img">
-        <div class="proj-img"><?= photo($img, '', '(max-width:640px) 100vw, (max-width:960px) 50vw, 300px') ?><span class="badge"><?= icon($ic) ?></span></div>
+        <div class="proj-img"><?= photo($img, html_entity_decode($t) . ' by OctaPower', '(max-width:640px) 100vw, (max-width:960px) 50vw, 300px') ?><span class="badge"><?= icon($ic) ?></span></div>
         <div class="card-body"><h3><?= $t ?></h3><p><?= $d ?></p>
         <span class="more">Learn more <?= icon('arrow') ?></span></div>
       </a>

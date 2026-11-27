@@ -3,3 +3,4 @@ Allow: /
 Disallow: /data/
 Disallow: /includes/
 Disallow: /admin
+Sitemap: https://octapower.in/sitemap.xml
